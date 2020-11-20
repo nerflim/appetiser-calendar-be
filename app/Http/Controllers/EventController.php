@@ -18,7 +18,7 @@ class EventController extends Controller
 
     public function index()
     {
-        return $this->response();
+        return $this->response(['hello' => 'world']);
     }
 
     public function post(Request $request)
