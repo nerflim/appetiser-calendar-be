@@ -21,4 +21,5 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'events'], function () use ($router) {
     $router->get('/', ['as' => 'events-all', 'uses' => 'EventController@index']);
     $router->post('/add', ['as' => 'events-add', 'uses' => 'EventController@post']);
+    $router->delete('/delete', ['as' => 'events-delete', 'uses' => 'EventController@delete']);
 });

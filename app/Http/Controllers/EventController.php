@@ -44,4 +44,14 @@ class EventController extends Controller
 
         return $this->response(['success' => true, 'message' => 'Event saved successfully!']);
     }
+
+    public function delete()
+    {
+        $events = Event::get();
+        foreach ($events as $event) {
+            $event->delete();
+        }
+
+        return $this->response(['success' => true, 'message' => 'All events deleted successfully!']);
+    }
 }
